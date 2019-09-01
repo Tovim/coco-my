@@ -246,7 +246,7 @@ Stylizačními problémy (issues) jsou:
 - použití příkazu `lambda` podle Pythonu,
 - dědění z entity `object` u tříd (Coconut to dělá automaticky)
 - použití `u` k označení stringů Unicoce (všechny řetězce v Coconut jsou řetězce Unicode)
-- použití zpětného lomítka k pokračování na dalším řádku (místo něj použijte [pokračování v závorkách](#enhanced-parenthetical-continuation).
+- použití zpětného lomítka k pokračování na dalším řádku (místo něj použijte [pokračování v závorkách](#vylepšené -závorkové-pokračování).
 
 ## Integrace
 
