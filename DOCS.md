@@ -1030,7 +1030,7 @@ Kromě příkazů ohledně normálních `dat`, podporuje Coconut také příkazy
 [match] data <name>(<patterns>) [from <base class>]:
     <body>
 ```
-kde `<patterns>` jsou totéž jako u [pattern-matching funkcí](#pattern-matching-functions).
+kde `<patterns>` jsou totéž jako u [pattern-matching funkcí](#funkce-pro-pattern-matching).
 
 Je důležité mít na vědomí, že `pattern-matching` datové typy se od normálních datových typů liší v mnoha věcech. Za prvé, na nesprávné argumenty reagují hlášením [`MatchError`](#matcherror) místo `TypeError` - stejně jako pattern-matching funkce.  Za druhé, `pattern-matching` datové typy neprovádí žádné speciální ošetření argumentů s hvězdičkou. Tudíž:
 ```
@@ -1101,7 +1101,7 @@ print(data)
 
 ### Příkazové lambdy 
 
-Skladba `příkazové lambdy` je rozšířením skladby normální [lambdy](#lambda) pro podporu příkazů, nikoliv pouze výrazů.
+Skladba `příkazové lambdy` je rozšířením skladby normální [lambdy](#lambdy) pro podporu příkazů, nikoliv pouze výrazů.
 
 Skadba pro příkazovou lambdu je:
 ```
@@ -1367,7 +1367,7 @@ Coconut provede automatickou optimalizaci a eliminaci koncové rekurze u každé
 
 _Note: Optimalizace koncového volání (byť ne eliminace koncové rekurze) pracuje i pro 1) vzájemnou rekurzi a 2) porovnávací (pattern-matching) funkce, rozdělené do několika definicí s pouožitím [`addpattern`](#addpattern)._
 
-Setkáte-li se s `RuntimeError` v souvislosti s maximální hloubkou rekurze, je velmi vhodné přepsat svou funkci aby vyhověla výše uvedenému kriteriu pro optimalizaci koncovým voláním nebo odpovídajícímu kriteriu pro [`recursive_iterator`](#recursive-iterator), obojí by mělo takové chybě zabránit.
+Setkáte-li se s `RuntimeError` v souvislosti s maximální hloubkou rekurze, je velmi vhodné přepsat svou funkci aby vyhověla výše uvedenému kriteriu pro optimalizaci koncovým voláním nebo odpovídajícímu kriteriu pro [`recursive_iterator`](#recursive_iterator), obojí by mělo takové chybě zabránit.
 
 
 ##### Příklad
@@ -1472,7 +1472,7 @@ kde `<arg>` je definován jako
 ```
 kde `<name>` je název funkce, `<cond>` je nepovinná dodatečná kontrola, `<body>` je tělo funkce,  `<pattern>` je definován [příkazem `match`](#match) a  `<default>` je volitelná implicitní hodnota, není-li žádný argument zadán. Klíčové slovo `match` na začátku je nepovinné ale je někdy nezbytné pro odlišení definice porovnávací funkce od normální definice funkce, která má vždy přednost. 
 
-Je-li `<pattern>` jméno proměnné (přímo nebo s `<as>`), podporuje výsledná porovnávací funkce klíčové argumenty stejného jména. Jestliže provedení porovnávací funkce selže, vyvolá objekt [`MatchError`](#matcherror), stejně jako [rozložené přiřazení](#rozlozene-prirazeni).
+Je-li `<pattern>` jméno proměnné (přímo nebo s `<as>`), podporuje výsledná porovnávací funkce klíčové argumenty stejného jména. Jestliže provedení porovnávací funkce selže, vyvolá objekt [`MatchError`](#matcherror), stejně jako [rozkladné přiřazení](#rozkladne-prirazeni).
 
 _Note: Definice porovnávací funkce může být kombinována s definicí přiřazovací a/nebo infixové funkce._
 
@@ -1574,7 +1574,7 @@ Coconut podporuje výrazně zlepšené rozkladné přiřazení (destructuring as
 ```coconut
 [match] <pattern> = <value>
 ```
-kde `<value>` je libovolný výraz a `<pattern>` je definován  [příkazem `match`](#match). Klíčové slovo `match` na začátku je nepovinné ale je někdy nezbytné pro odlišení rozloženého přiřazení od normálního přiřazení, které má vždy přednost. Rozložené přiřazení v Coconut je ekvivalentní příkazu `match`, jehož skladba je:
+kde `<value>` je libovolný výraz a `<pattern>` je definován  [příkazem `match`](#match). Klíčové slovo `match` na začátku je nepovinné ale je někdy nezbytné pro odlišení rozloženého přiřazení od normálního přiřazení, které má vždy přednost. Rozkladné přiřazení v Coconut je ekvivalentní příkazu `match`, jehož skladba je:
 ```coconut
 match <pattern> in <value>:
     pass
@@ -1780,7 +1780,7 @@ _Nelze provést bez definování uživatelskéko typu `map`. Úplnou definici `m
 
 ### `addpattern` 
 
-Tato funkce přijímá argument, jenž je [pattern-matching funkcí](#porovnavaci-funkce) a vrací dekorátor, který přidává předlohy z existující funkce do nové dekorované funkce, v níž je existující předloha ověřována jako první. Její skladba je zhruba ekvivalentní k:
+Tato funkce přijímá argument, jenž je [pattern-matching funkcí](#funkce-pro-pattern-matching) a vrací dekorátor, který přidává předlohy z existující funkce do nové dekorované funkce, v níž je existující předloha ověřována jako první. Její skladba je zhruba ekvivalentní k:
 ```
 def addpattern(base_func):
     """Decorator to add a new case to a pattern-matching function, where the new case is checked last."""
