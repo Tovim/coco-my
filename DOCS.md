@@ -2431,7 +2431,7 @@ Objekt `MatchError` je vyvolán, když selže [destructuring assignment](#rozkla
 
 ### Automatická kompilace
 
-Pokud nemáte speciení požadavky ohledně parametrů kompilace, můžete použít automatickou kompilaci, která se vám postará o všechno potřebné. Pokud před čímkoli ostatním importujete [`coconut.convenience`](#coconut.convenience), Coconut prověří každý váš import a zjistí-li, že importujete soubor ` ~.coco`, automaticky jej kompiluje. Pamatujte, že aby Coconut věděl, jaký soubor importujete, musí být dostupný via `sys.path`, stejně jako normální import.
+Pokud nemáte speciení požadavky ohledně parametrů kompilace, můžete použít automatickou kompilaci, která se vám postará o všechno potřebné. Pokud před čímkoli ostatním importujete [`coconut.convenience`](#coconut-convenience), Coconut prověří každý váš import a zjistí-li, že importujete soubor ` ~.coco`, automaticky jej kompiluje. Pamatujte, že aby Coconut věděl, jaký soubor importujete, musí být dostupný via `sys.path`, stejně jako normální import.
 
 Automatická kompilace vždycky kompiluje moduly a pakety v místě a vždy používá `--target sys`. Automatická kompilace je vždy dostupná v interpretu Coconut, stejně jako vestavěná funkce `reload` pro snadné znovunačtení importovaných modulů.
 
@@ -2453,7 +2453,7 @@ Každý argument _mode_ má dvě komponenty: jaký používá parser a jaké jak
     + parser: file
         * The file parser can parse any Coconut code.
     + header: sys
-        * This header imports [`coconut.__coconut__`](#coconut.__coconut__) to access the necessary Coconut objects.
+        * This header imports [`coconut.__coconut__`](#coconut-coconut) to access the necessary Coconut objects.
 - `"exec"`:
     + parser: file
     + header: exec
