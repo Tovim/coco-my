@@ -2424,7 +2424,7 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 
 ### `MatchError` 
 
-Objekt `MatchError` je vyvolán, když selže [destructuring assignment](#rozložene-přiřazení), načež je `MatchError` poskytnut jako vestavěná procedura pro odchycení takovýchto chyb. Objekty `MatchError` podporují dva atributy, `pattern`, což je řetězec, popisující selhávající předlohu a `value`, což je objekt, který selhal při porovnávání s předlohou.
+Objekt `MatchError` je vyvolán, když selže [destructuring assignment](#rozložené-přiřazení), načež je `MatchError` poskytnut jako vestavěná procedura pro odchycení takovýchto chyb. Objekty `MatchError` podporují dva atributy, `pattern`, což je řetězec, popisující selhávající předlohu a `value`, což je objekt, který selhal při porovnávání s předlohou.
 
 
 ## Moduly Coconut
