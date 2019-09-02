@@ -2535,7 +2535,7 @@ Přináší řetězec, obsahující informaci o verzi Coconutu. Volitelný argum
 
 **coconut.convenience.auto_compilation**(**[**_on_**]**)
 
-Zapíná či vypíná [automatickou  compilaci](#automaticka-compilace) (implicitně je zapnuta). Tato funkce je volána automaticky při importu `coconut.convenience`.
+Zapíná či vypíná [automatickou  compilaci](#automaticka-kompilace) (implicitně je zapnuta). Tato funkce je volána automaticky při importu `coconut.convenience`.
 
 #### `CoconutException`
 
