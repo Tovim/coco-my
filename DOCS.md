@@ -2498,7 +2498,7 @@ while True:
 
 `setup` lze použít pro zadání flagů příkazového řádku, použitých funkcí `parse`. Možné hodnoty flagů jsou:
 
-- _target_: `None` (default), or any [allowable target](#allowable-targets)
+- _target_: `None` (default), or any [allowable target](#pripustne-cile)
 - _strict_: `False` (default) or `True`
 - _minify_: `False` (default) or `True`
 - _line\_numbers_: `False` (default) or `True`
@@ -2535,7 +2535,7 @@ Přináší řetězec, obsahující informaci o verzi Coconutu. Volitelný argum
 
 **coconut.convenience.auto_compilation**(**[**_on_**]**)
 
-Zapíná či vypíná [automatickou  compilaci](#automatic-compilation) (implicitně je zapnuta). Tato funkce je volána automaticky při importu `coconut.convenience`.
+Zapíná či vypíná [automatickou  compilaci](#automaticka-compilace) (implicitně je zapnuta). Tato funkce je volána automaticky při importu `coconut.convenience`.
 
 #### `CoconutException`
 
