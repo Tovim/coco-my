@@ -1,0 +1,16 @@
+# .readthedocs.yml je konfigurační soubor pro RTD
+
+# Required
+version 2
+
+python:
+    version: 3
+    pip_install: true
+    extra_requirements:
+        - docs
+
+formats:
+#    - htmlzip
+#    - pdf
+
+#    - epub
