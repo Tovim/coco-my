@@ -63,8 +63,15 @@ from coconut.constants import (  # NOQA
 version = VERSION
 release = version_str_tag
 
-html_theme = "bootstrap"
-html_theme_path = get_html_theme_path()
+with open("README.rst", "r") as readme_file:
+    readme = readme_file.read()
+
+with open("index.rst", "w") as index_file:
+    index_file.write(readme.replace(without_toc, with_toc))
+
+# -----------------------------------------------------------------------------------------------------------------------
+# DEFINITIONS:
+# -----------------------------------------------------------------------------------------------------------------------
 
 master_doc = "index"
 exclude_patterns = ["README.*"]
